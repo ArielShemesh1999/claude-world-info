@@ -6,7 +6,7 @@
 
 ## 🌐 Live Site
 
-### Coming soon — Vercel deployment in progress
+[claude-world-two.vercel.app](https://claude-world-two.vercel.app)
 
 ---
 
