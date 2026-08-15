@@ -4,10 +4,6 @@
 
 **Play:** [claude-world-two.vercel.app](https://claude-world-two.vercel.app)
 
-<p align="center">
-  <img src="assets/preview.webp" alt="claude-world — the live site" width="100%">
-</p>
-
 On-site it is *The Listening World*: "A world dreamed by the model — and it listens." You mine, place, craft and survive a day/night cycle — and recruit six Claude-persona NPCs into an agency, dispatch them on missions that pay ⊙ tokens, spend those on an upgrade tree, and press `P` to speak one of **86 Words** that rewrite it. The headline mode, **THE LABYRINTH**, is ten monster-guarded maze levels, Hedge Walk through Diamond Core.
 
 The whole engine is one file: `mc.js`, ~2,100 lines / 247 KB — voxel world, chunk streaming, block+sky lighting, crafting, mobs, arena, maze campaign. `index.html` pulls Three.js `r149` (`three@0.149.0`) from unpkg with an SRI hash and a global `THREE`, then loads `intro_leds.js` and `mc.js`. That is the whole load chain, and the deployed CSP — a Vercel response header, not a meta tag — sets `connect-src 'none'`: no `fetch`, XHR or WebSocket leaves the page, and the pinned CDN script is the only outbound request.
